@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+}
+
+*{
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: floralwhite;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.header .logo {
+    width: 120px;
+    background-color: floralwhite;
+    mix-blend-mode: multiply;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: black;
+    align-items: center;
+}
+
+.nav-bar ul li {
+    padding: 0 20px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    color: black;
+    
+}
+
+.nav-bar ul li:hover {
+    color: rgb(42, 44, 165);
+}
+
+
+.restraunt-card {
+    width: 280px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-size: 17px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.restraunt-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05);
+}
+
+.restraunt-card .logo2 {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.restraunt-card .button {
+    display: inline-block;
+    height: 50px;
+    width: 70%;
+    margin: 15px auto 0; /* centers the button inside card */
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: rgb(196, 161, 161);
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    color: black;
+    text-align: center;
+    line-height: 50px; 
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.restraunt-card .button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3); /* subtle ripple effect */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.restraunt-card .button:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 15px rgba(196, 161, 161, 0.6);
+}
+
+.restraunt-card .button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+
+.restraunt-card p,
+.restraunt-card h2 {
+    margin: 10px 0;
+
+}
+
+.body {
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.body .search {
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.body .search .searchbar {
+    width: 500px;
+    font-size: medium;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 10px;
+}
+
+.body .Searchbutton {
+    height: 44px;
+    width: 120px;
+    cursor: pointer;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: rgb(196, 161, 161);
+    font-size: medium;
+    border: none;
+}
+
+.body .Restrauntcard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.body .sort-button {
+    height: 50px;
+    width: 15%;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: rgb(196, 161, 161);
+    font-size: 16px;
+    border: none;
+    margin-top: 10px;
+
+}
+
+
+.body .sortbutton {
+    display: flex;
+    gap: 50px;
+    padding-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sort-button:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+
+.shimmer-card {
+    width: 280px;
+    height: 400px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    border-radius: 8px;
+    margin: 10px;
+    animation: shimmer 1.5s infinite;
+}
+
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -280px 0;
+    }
+
+    100% {
+        background-position: 280px 0;
+    }
+}
+
+.search-shimmer {
+    display: flex;
+    justify-content: center;
+    padding-top: 18px;
+    padding-bottom: 20px;
+}
+
+.search-shimmer .searchbar-shimmer {
+    width: 500px;
+    font-size: medium;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 10px;
+    height: 24px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    border: none;
+    animation: shimmer 1.5s infinite;
+   
+    
+    
+
+    
+}
+
+.search-shimmer .Searchbutton-shimmer {
+    height: 44px;
+    width: 120px;
+    cursor: pointer;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    border: none;
+    animation: shimmer 1.5s infinite;
+    border-left: grey solid 1px;
+}
+
+
+.button-shimmer-card {
+    width: 120px;
+    height: 44px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    border-radius: 30px;
+    margin: 10px;
+    animation: shimmer 1.5s infinite;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+
+.button-shimmer-container .button-shimmer-card {
+    height: 50px;
+    width: 15%;
+    cursor: pointer;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    font-size: 18px;
+    border: none;
+    margin-top: 10px;
+    animation: shimmer 1.5s infinite;
+
+}
+
+
+.button-shimmer-container {
+    display: flex;
+    gap: 35px;
+    padding-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar ul .login {
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgb(196, 161, 161);
+    font-size: medium;
+    border: none;
+    
+}
+
+.nav-bar ul .login:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}

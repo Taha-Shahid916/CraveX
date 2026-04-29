@@ -1,18 +1,19 @@
 import { useState } from "react";
-import { LOGO_URL } from "../utils/constants";
+import img1 from "url:../utils/CraveXnew.png";
+import { Link } from "react-router";
 const Header = () => {
   const [buttonname, setbuttonname] = useState("Login");
   return (
     <div className="header">
       <div className="logo-container">
-       <a href="index.html"><img className="logo" src={LOGO_URL} alt="Logo.png"></img></a>
+       <a href="index.html"><img className="logo" src={img1} alt="Logo.png"></img></a>
       </div>
       <div className="nav-bar">
         <ul >
-          <a href="#"><li>Home</li></a>
-          <a href="#"><li>About Us</li></a>
-          <a href="#"><li>Contact Us</li></a>
-          <a href="#"><li>Cart</li></a>
+          <Link to="/"><li>Home</li></Link>
+          <Link to="/about"><li>About Us</li></Link>
+          <Link to="/contact"><li>Contact Us</li></Link>
+          <Link to="/cart"><li>Cart</li></Link>
           <button className="login" onClick={() => {
             buttonname == "Login" ? setbuttonname("Logout") : setbuttonname("Login");
           }}>

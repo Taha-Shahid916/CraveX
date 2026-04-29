@@ -1,40 +1,36 @@
 const Shimmer = () => {
     return (
-        <div>
+        <div className="shimmer-wrapper">
+            {/* Shimmer for filter buttons */}
             <div className="button-shimmer-container">
                 <div className="button-shimmer-card"></div>
                 <div className="button-shimmer-card"></div>
                 <div className="button-shimmer-card"></div>
                 <div className="button-shimmer-card"></div>
                 <div className="button-shimmer-card"></div>
-                </div>
-
-    
-            <div className="search-shimmer">
-                <input className="searchbar-shimmer" />
-                <button className="Searchbutton-shimmer">
-                </button>
             </div>
 
+            {/* Shimmer for search bar */}
+            <div className="search-shimmer">
+                <div className="searchbar-shimmer"></div>
+                <div className="Searchbutton-shimmer"></div>
+            </div>
 
+            {/* Shimmer for restaurant cards */}
             <div className="shimmer-container">
-                <div className="shimmer-card"></div>
-                <div className="shimmer-card"></div>
-                <div className="shimmer-card"></div>
-                <div className="shimmer-card"></div>
-                <div className="shimmer-card"></div>
-                <div className="shimmer-card"></div>
-                <div className="shimmer-card"></div>
-                <div className="shimmer-card"></div>
-                <div className="shimmer-card"></div>
-                <div className="shimmer-card"></div>
-                <div className="shimmer-card"></div>
-                <div className="shimmer-card"></div>
-                <div className="shimmer-card"></div>
+                {Array(10).fill("").map((_, index) => (
+                    <div className="shimmer-card" key={index}>
+                        <div className="shimmer-image"></div>
+                        <div className="shimmer-title"></div>
+                        <div className="shimmer-text"></div>
+                        <div className="shimmer-text"></div>
+                        <div className="shimmer-text"></div>
+                        <div className="shimmer-button"></div>
+                    </div>
+                ))}
             </div>
         </div>
     );
-
-}
+};
 
 export default Shimmer;

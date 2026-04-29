@@ -2,6 +2,9 @@ import RestrauntCard from "./RestrauntCard";
 import reslist from "../utils/mockdata";
 import { useEffect, useState } from "react";
 import Shimmer from "./shimmer";
+import useOnlineStatus from "../utils/useOnlineStatus";
+
+
 const Body = () => {
     const [ListofRestraunt, setListofRestraunt] = useState([]);
     const [allRestraunt, setallRestraunt] = useState([]);
@@ -34,6 +37,12 @@ const Body = () => {
             setListofRestraunt(filteredlist);
         }
     };
+    const onlineStatus = useOnlineStatus();
+    if (onlineStatus === false) 
+        return (
+            <h1>🔴 Offline, Please check your internet connection!!</h1>
+        );
+        
     return ListofRestraunt.length === 0 ? <Shimmer /> : (
         <div className="body">
             <div className="sortbutton">
